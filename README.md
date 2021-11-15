@@ -36,7 +36,7 @@ function flesSchudden() {
     });
 };
 ```
-`animation: 2s linear .01s infinte alternate forwards` in JavaScript ziet er als volgt uit:
+Animatie aanroepen (`animation: 2s linear .01s infinte alternate forwards;`) ziet er als volgt uit in JavaScript:
 ```Javascript
 duration: 2000, //milliseconds
 easing: 'linear', //'linear', a bezier curve, etc.
