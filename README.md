@@ -1,5 +1,5 @@
 # Babykit
-Dit zou eerst een CSS only opdracht worden maar ik heb later wat JavaScript toegevoegd.
+Dit zou eerst een CSS only opdracht worden maar ik heb later wat JavaScript toegevoegd. Dit heb ik gedaan zodat ik met de `Element.animate()` methode kan werken.
 
 ```JavaScript
 function flesSchudden() {
