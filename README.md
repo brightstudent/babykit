@@ -36,6 +36,15 @@ function flesSchudden() {
     });
 };
 ```
+`animation: 2s linear 10s infinte alternate forwards` in JavaScript ziet er als volgt uit:
+```Javascript
+duration: 2000, //milliseconds
+easing: 'linear', //'linear', a bezier curve, etc.
+delay: 10, //milliseconds
+iterations: Infinity, //or a number
+direction: 'alternate', //'normal', 'reverse', etc.
+fill: 'forwards' //'backwards', 'both', 'none', 'auto'
+```
 
 ## Bron
 https://www.youtube.com/embed/YXZX_6RfHjk?start=153
