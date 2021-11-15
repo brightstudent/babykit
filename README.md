@@ -36,9 +36,7 @@ function flesSchudden() {
     });
 };
 ```
-https://www.youtube.com/embed/YXZX_6RfHjk?start=153
-## Bron
-<a href="https://www.youtube.com/embed/YXZX_6RfHjk?start=150" target="_blank"><img src="https://www.youtube.com/embed/YXZX_6RfHjk?start=150" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YXZX_6RfHjk?controls=0&amp;start=153" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+## Bron
+https://www.youtube.com/embed/YXZX_6RfHjk?start=153
+
