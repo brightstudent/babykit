@@ -1,5 +1,5 @@
 # Babykit
-Dit zou eerst een CSS only opdracht worden maar ik heb later wat JavaScript toegevoegd. Dit heb ik gedaan zodat ik met de `Element.animate()` methode kan oefenen, om te kijken of dat beter is dan `@keframes` in CSS.
+Dit zou eerst een CSS only opdracht worden maar ik heb later wat JavaScript toegevoegd. Dit heb ik gedaan zodat ik met de `Element.animate()`{:.JavaScript} methode kan oefenen, om te kijken of dat beter is dan `@keframes`{:.CSS} in CSS.
 
 ```JavaScript
 function flesSchudden() {
