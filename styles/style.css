@@ -1,0 +1,354 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  --background-color: #ff7649;
+  --border-color: #801338;
+  --border: solid 6px var(--border-color);
+  --main-color: #ffcf35;
+
+  position: relative;
+  background-color: var(--background-color);
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  perspective: 100px;
+}
+
+.fles,
+.talk,
+.eend {
+  cursor: pointer;
+}
+
+/* --------------> MLEKFLES <-------------- */
+
+.fles {
+  position: absolute;
+  width: 150px;
+  left: calc(50% - 25px);
+  bottom: 25%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* melkdruppel */
+
+.melk {
+  position: absolute;
+  width: 6px;
+  height: 80px;
+  left: 72px;
+  top: 10px;
+
+  background-color: white;
+}
+
+/* melkspeen */
+.speen {
+  position: relative;
+  width: 86px;
+  z-index: 50;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.speen .top {
+  position: relative;
+  width: 33px;
+  height: 49px;
+  z-index: 100;
+
+  background-color: var(--main-color);
+  border: var(--border);
+  border-bottom: none;
+  border-radius: 17px 17px 0 0;
+}
+
+.speen .bottom {
+  position: relative;
+  width: 55px;
+  height: 22px;
+  margin-top: -2px;
+  clip-path: polygon(11px 0, calc(100% - 11px) 0, 100% 100%, 0 100%, 11px 0);
+  background-color: var(--main-color);
+  background-image: linear-gradient(
+      116deg,
+      var(--border-color) 16px,
+      transparent 16px
+    ),
+    linear-gradient(244deg, var(--border-color) 16px, transparent 16px);
+  background-size: 52% 100%;
+  background-position: top left, right top;
+  background-repeat: no-repeat;
+}
+
+.speen .dop {
+  width: 100%;
+  height: 30px;
+  background-color: var(--background-color);
+  border: var(--border);
+}
+
+/* melkfles */
+.flesglas {
+  width: 100%;
+  height: 270px;
+  margin-top: -6px;
+
+  background: white
+    repeating-linear-gradient(var(--background-color) 0px 6px, white 6px 21px)
+    14px center / 35px 48px no-repeat;
+  border: var(--border);
+  border-radius: 34% 34% 15px 15px;
+}
+
+/*--------------> HANDDOEK <-------------- */
+
+.handdoek {
+  position: absolute;
+  width: 287px;
+  height: 94px;
+  left: calc(50% - 240px);
+  bottom: 25%;
+}
+
+.toppart,
+.botpart {
+  position: absolute;
+  width: 240px;
+  height: 50px;
+  left: 0;
+
+  background: white
+    linear-gradient(
+      to left,
+      var(--border-color) 6px,
+      var(--background-color) 6px 39px,
+      var(--border-color) 39px 45px
+    )
+    50px center / 45px 100% no-repeat;
+  border: var(--border);
+  border-right: none;
+  border-radius: 50px 0 0 50px;
+}
+
+.toppart {
+  top: 0;
+}
+
+.botpart {
+  bottom: 0;
+}
+
+.sidepart {
+  position: absolute;
+  width: 47px;
+  height: 94px;
+  right: 0;
+  top: 0;
+
+  background: white;
+  border: var(--border);
+  border-left: none;
+  border-radius: 0 47px 47px 0;
+}
+
+/*--------------> EEND <-------------- */
+
+@keyframes zwemmend {
+  0% {
+    right: calc(50% - 40px);
+    transform: scalex(1);
+  }
+
+  10% {
+    transform: rotate(-3deg);
+  }
+
+  45% {
+    transform: scalex(1) rotate(3deg);
+  }
+
+  50% {
+    transform: scalex(-1);
+    right: calc(50% + 120px);
+  }
+
+  60% {
+    transform: scalex(-1) rotate(-3deg);
+  }
+
+  95% {
+    transform: scalex(-1) rotate(3deg);
+  }
+  100% {
+    right: calc(50% - 40px);
+    transform: scalex(1);
+  }
+}
+
+.eend {
+  position: absolute;
+  bottom: calc(25% + 88px);
+
+  /* animation: zwemmend 8s linear infinite; */
+  animation: zwemmend 7.8s ease-in-out infinite;
+}
+
+.eend.sneller {
+  animation-duration: 2s;
+}
+
+/* eend hoofd */
+@keyframes hobbelen {
+  0% {
+    transform: translateX(12px) rotate(4deg);
+  }
+  100% {
+    transform: translateX(12px) rotate(-3deg);
+  }
+}
+
+.hoofd {
+  position: relative;
+  width: 60px;
+  height: 60px;
+
+  background: var(--main-color) linear-gradient(var(--border-color) 0% 100%)
+    15px 15px / 6px 6px no-repeat;
+  border: var(--border);
+  border-radius: 60px;
+
+  transform-origin: center top;
+  animation: hobbelen .85s ease-in-out infinite alternate;
+}
+
+.snavel {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: -24px;
+  top: 14px;
+
+  background-color: var(--background-color);
+  border: var(--border);
+  border-bottom-left-radius: 40px;
+}
+
+/* eend lijf */
+.lijf {
+  width: 120px;
+  height: 60px;
+  margin-top: -12px;
+  background-color: var(--main-color);
+  border: var(--border);
+  border-radius: 60px;
+}
+
+/*--------------> TALK <-------------- */
+
+.talk {
+  position: absolute;
+  width: 130px;
+  left: calc(50% + 109px);
+  bottom: 25%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* talk dop */
+.talk .dop {
+  width: 110px;
+  height: 30px;
+  z-index: 50;
+
+  background-color: var(--background-color);
+  border: var(--border);
+}
+
+/* talk doos */
+.doos {
+  width: 130px;
+  height: 130px;
+  margin-top: -6px;
+  z-index: 50;
+
+  background-color: var(--main-color);
+  border: var(--border);
+  border-radius: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sticker {
+  width: 60px;
+  height: 60px;
+  background-color: var(--background-color);
+  border: var(--border);
+  border-radius: 50%;
+}
+
+/* talk poeder */
+
+.poeder {
+  position: absolute;
+  width: 100px;
+  height: calc(30px + 10%);
+  left: 15px;
+  top: 15px;
+
+  background-color: rgba(255, 255, 255, 0.88);
+  border-radius: 50%;
+  filter: blur(10px);
+}
+
+/* Responsive: op de telefoon */
+@media (max-width: 500px) {
+  main {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 400px) {
+  main {
+    transform: scale(0.6);
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             responsive heights                             */
+/* -------------------------------------------------------------------------- */
+
+@media (max-height: 420px) {
+  main {
+    transform: scale(0.6);
+  }
+}
+
+@media (max-height: 820px) {
+  main {
+    position: absolute;
+    bottom: -15%;
+  }
+}
